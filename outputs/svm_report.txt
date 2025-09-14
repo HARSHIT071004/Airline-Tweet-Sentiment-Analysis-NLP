@@ -1,0 +1,11 @@
+SVM Accuracy: 0.8043
+
+              precision    recall  f1-score   support
+
+    Negative       0.84      0.92      0.88      1889
+     Neutral       0.66      0.54      0.60       580
+    Positive       0.80      0.66      0.72       459
+
+    accuracy                           0.80      2928
+   macro avg       0.76      0.71      0.73      2928
+weighted avg       0.80      0.80      0.80      2928

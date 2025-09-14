@@ -1,0 +1,11 @@
+Logistic Regression Accuracy: 0.8002
+
+              precision    recall  f1-score   support
+
+    Negative       0.83      0.93      0.88      1889
+     Neutral       0.67      0.53      0.59       580
+    Positive       0.81      0.61      0.69       459
+
+    accuracy                           0.80      2928
+   macro avg       0.77      0.69      0.72      2928
+weighted avg       0.79      0.80      0.79      2928
