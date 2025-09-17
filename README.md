@@ -1,37 +1,54 @@
-Airline Tweet Sentiment Analysis (NLP)
+Airline Tweet Sentiment Analysis | NLP
 Overview
 
-This project performs sentiment analysis on airline-related tweets using Natural Language Processing (NLP). The objective is to classify tweets as Positive, Negative, or Neutral, providing insights into public opinion about different airlines.
+This project applies Natural Language Processing (NLP) to analyze airline-related tweets and classify them as Positive, Negative, or Neutral. It demonstrates a complete pipeline—from preprocessing and feature engineering to machine learning model evaluation—providing insights into public sentiment toward airlines.
 
 Dataset
 
 Source: Tweets.csv
 
-Features include:
+Records: ~14,600 tweets
 
-Text: The content of the tweet
+Features:
 
-Airline: The airline the tweet refers to
+Text – Tweet content
 
-Sentiment: Label indicating sentiment (Positive/Negative/Neutral)
+Airline – Airline referenced in the tweet
 
-Additional metadata: Date, Tweet ID, and other relevant fields
+Sentiment – Label (Positive/Negative/Neutral)
 
-Preprocessing and Feature Engineering
+Metadata – Date, Tweet ID, and additional attributes
+
+Project Workflow
+1. Data Cleaning
 
 Removed punctuation, special characters, and stopwords
 
-Converted all text to lowercase for normalization
+Normalized text by converting to lowercase
 
-Tokenized text and applied TF-IDF vectorization
+Handled missing or inconsistent values
 
-Handled class imbalance if necessary
+2. Exploratory Data Analysis (EDA)
 
-Split data into training and testing sets
+Examined sentiment distribution across airlines
 
-Modeling Approach
+Created count plots, bar charts, and word clouds for sentiment classes
 
-Built and compared multiple classification models, e.g.:
+Analyzed relationships between airlines and sentiment trends
+
+3. Feature Engineering
+
+Tokenized text
+
+Applied TF-IDF vectorization for feature extraction
+
+Addressed class imbalance where necessary
+
+Split the dataset into training and testing sets
+
+4. Model Building
+
+Trained multiple classification models:
 
 Logistic Regression
 
@@ -39,53 +56,77 @@ Naive Bayes
 
 Support Vector Machine (SVM)
 
-Tuned hyperparameters using GridSearchCV
+Performed GridSearchCV for hyperparameter tuning
 
-Evaluated models using accuracy, precision, recall, F1-score, and confusion matrices
+5. Model Evaluation
 
-Tech Stack
+Evaluated models using Accuracy, Precision, Recall, F1-score, and Confusion Matrices
+
+Compared model performance to select the best-performing classifier
+
+Key Insights
+
+SVM and Logistic Regression provided strong accuracy across classes.
+
+Class imbalance slightly affected Neutral predictions.
+
+Tweets referencing customer service issues drove most negative sentiment.
+
+Technology Stack
 
 Language: Python 3.x
 
-Libraries: pandas, numpy, scikit-learn, nltk or spaCy, matplotlib, seaborn, streamlit (for deployment)
+Libraries: pandas, numpy, scikit-learn, nltk or spaCy, matplotlib, seaborn, streamlit
 
-How to Use
-1. Clone the Repository
+Output Files
+
+Preprocessed data saved as cleaned_tweets.csv
+
+Visualization outputs (word clouds, sentiment distributions) saved as .png images
+
+How to Run
+
+Clone the Repository
+
 git clone https://github.com/HARSHIT071004/Airline-Tweet-Sentiment-Analysis-NLP.git
 cd Airline-Tweet-Sentiment-Analysis-NLP
 
-2. Install Dependencies
+
+Install Dependencies
+
 pip install -r requirements.txt
 
-3. Train and Evaluate Models
 
-Open the Jupyter Notebook (NLP_Modelling.ipynb)
+Train and Evaluate Models
+
+Open the Jupyter Notebook: NLP_Modelling.ipynb
 
 Or run the training script to preprocess data and build models
 
-4. Run the Web App (Optional)
+Run the Web App (Optional)
+
 streamlit run app.py
 
 
-Enter a tweet in the input box and get the predicted sentiment instantly.
+Enter a tweet in the input field to instantly get the predicted sentiment
 
 Results
 
-Achieved strong classification performance with high accuracy.
+Achieved high classification accuracy across sentiment classes
 
-Confusion matrix and evaluation metrics indicate balanced performance across classes.
+Confusion matrices confirmed balanced performance
 
-Random Forest or SVM (depending on your experiment results) delivered the best accuracy.
+SVM consistently outperformed other models in precision and recall
 
 Future Enhancements
 
-Integrate Word2Vec, GloVe, or BERT embeddings for better feature representation.
+Use advanced embeddings such as Word2Vec, GloVe, or BERT
 
-Improve performance on Neutral class predictions.
+Improve classification for Neutral tweets
 
-Deploy a live web app for real-time sentiment monitoring.
+Deploy as a real-time web application for live sentiment monitoring
 
-Expand analysis to multiple social media platforms.
+Expand to multi-platform sentiment analysis
 
 Author
 
